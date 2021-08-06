@@ -1,0 +1,117 @@
+.error404 {
+  background: url(src/assets/images/404.png);
+  height: 100vh;
+  background-position-x: 50%;
+
+  &__title {
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+    font-weight: bold;
+    padding-top: 8rem;
+  }
+  &__p {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 0.4rem;
+  }
+}
+
+@keyframes particleAnimation
+{
+    from {
+        left: -100px;
+    }
+    to {
+        left: calc( 100% + 100px );
+    }
+}
+
+.stars{
+  position:fixed;
+  left:0px;
+  top:50px;
+  width:1px;
+  height:1px;
+  background-color:white;;
+  animation-name:particleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.stars::before{
+  position:absolute;
+  display:block;
+  content:"";
+  width:100px;
+  right:1px;
+  top:0px;
+  height:3px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgb(255, 255, 255) 100%); 
+}
+
+.star-1{
+  animation-duration:10s;
+  top:10%;
+}
+.star-2{
+  animation-duration:8s;
+  top:30%;
+}
+.star-3{
+  animation-duration:15s;
+  top:60%;
+}
+.star-4{
+  animation-duration:9s;
+  top:90%;
+}
+.star-5{
+  animation-duration:15s;
+  top:32%;
+}
+.star-6{
+  animation-duration:10s;
+  top:75%;
+}
+.star-7{
+  animation-duration:11s;
+  top:50%;
+}
+.star-8{
+  animation-duration:15s;
+  top:15%;
+}
+.star-9{
+  animation-duration:13s;
+  top:35%;
+}
+.star-10{
+  animation-duration:20s;
+  top:65%;
+}
+.star-11{
+  animation-duration:14s;
+  top:95%;
+}
+.star-12{
+  animation-duration:11s;
+  top:40%;
+}
+.star-13{
+  animation-duration:13s;
+  top:80%;
+}
+.star-14{
+  animation-duration:16s;
+  top:55%;
+}
+
+@media (min-width:1025px){
+  .error404 {
+    &__p {
+      font-size: 5rem;
+    }
+  }
+}

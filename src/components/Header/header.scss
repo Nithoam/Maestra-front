@@ -1,0 +1,144 @@
+@use 'src/styles/vars';
+@use 'src/styles/animations';
+
+.logout-button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+.header {
+  position:fixed;
+  width:100vw;
+  z-index: 100;
+  top:0;
+  text-align: center;
+  padding:1rem;
+  background-color: vars.$first-color;
+
+  .active {
+    font-weight: bold;
+  }
+
+  .underline {
+    background: 
+        linear-gradient(currentColor 0 0) 
+        var(--p, 0) 100% /var(--d, 0) 1.5px 
+        no-repeat;
+    transition: 0.3s, background-position 0s 0.3s;
+  }
+  .underline:hover {
+    @media screen and (min-width:1024px){
+    --d: 100%;
+    --p: 100%;
+    }
+  }
+
+  h1 {
+    font-size:2rem;
+    font-weight: bold;
+  }
+
+  &__open-burger {
+
+    animation: small-slide-in-right 2.5s ease-out;
+    cursor:pointer;
+    color:white;
+    background:  linear-gradient(to bottom right, #535fce,  rgb(25, 212, 245));
+    box-shadow: 2px 2px 2px grey;
+    z-index: 2;
+    padding:15px;
+    border-radius: 50%;
+    position:fixed;
+    bottom:1rem;
+    right:1rem;
+  }
+
+
+
+  &__menu-toggle {
+    @media  (max-width:1024px){
+      animation: burger 0.5s ease-in-out;
+    }
+    color:white;
+    position:fixed;
+    background: linear-gradient(to bottom right, #535fce,  rgb(25, 212, 245));
+    width:calc(100vw - 2rem);
+    border-radius: 10px;
+    left:1rem;
+    bottom:1rem;
+    height:25vh;
+    z-index: 1;
+
+    li {
+      @media (max-width:1024px){
+        font-size: 15px;
+        margin-right:0.25rem;
+        margin-left: 0.25rem;
+      }
+    }
+    @media screen and (min-width:1024px){
+      background: #bf713d;
+    }
+
+    // li:last-of-type {
+    //   grid-column: 2;
+    // }
+
+    ul {
+      height:100%;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 12.5vh 12.5vh;
+      align-items: center;
+    }
+
+    a {
+      display:flex;
+      flex-direction: column;
+  }
+
+  .closeBtn {
+    position: absolute;
+    z-index: 2;
+    bottom:1.5rem;
+    right:1.5rem;
+
+  }
+}
+}
+
+@media screen and (min-width:1024px){
+  .header {
+
+    animation: header 2.5s ease-in-out;
+    display:flex; 
+    justify-content: space-between;
+    align-items: center;
+
+    &__open-burger {
+      display:none;
+    }
+
+    &__menu-toggle {
+      color:black;
+      background-color: vars.$first-color;
+      display:block;
+      position:static;
+      height:auto;
+      width:auto;
+
+      ul {
+        display:flex;
+        justify-content: space-around;
+      }
+
+      li {
+        margin-right:1rem;
+      }
+
+      i {
+        display: none;
+      }
+    }
+  }
+}

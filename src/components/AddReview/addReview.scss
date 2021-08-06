@@ -1,0 +1,219 @@
+#addReview{
+  position: relative;
+  background: linear-gradient(to bottom right, #fbfdd4, #fad16d);
+  background-size: cover;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  min-height:90vh;
+  z-index: 1;
+  @media (min-width:1024px){
+    padding-top: 5rem;
+  }
+}
+.addReview__errors-title, .addReview__errors-content {
+  color: red;
+}
+.addReview__errors-title{
+  margin:1rem 0 0.5rem 0;
+}
+.addReview__validate{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+
+  &-message{
+    color: green;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 4rem auto;
+    margin-bottom:2rem;
+    @media (min-width:700px){
+      font-weight:bold;
+      margin-bottom:4rem;
+    }
+  }
+  &-button{
+    width:75%;
+    margin:auto;
+    display:block;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    appearance: none;
+    padding: 0.5rem 0;
+    @media (min-width:700px){
+      width:40%
+    }
+    @media (min-width:700px){
+      width:33%
+    }
+  }
+  button{
+    border-radius: 1rem;
+  }
+}
+.addReview{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #42330d;
+  margin:0 1rem;
+  display:flex;
+  flex-direction: column;
+  z-index: 1;
+
+  @media (min-width:700px){
+    margin-top:2rem;
+    padding:1.5rem 2.5rem;
+  }
+  @media (min-width:1025px){
+    margin-top:0rem;  
+  }
+  &__title{
+    font-size: 25px;
+    border-radius: 1rem;
+    text-align: center;
+    width:90%;
+    height:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 0 auto;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__figure{
+    display: flex;
+    justify-content: center;
+    margin-top:1.5rem;
+    &-image{
+      max-height: 200px;
+      border-radius:5px;
+      @media (min-width:1025px){
+        width:50%;
+
+      }
+    }
+  }
+  &__pill-presentation , &__pill-composition{
+    margin-top:1.5rem;
+    @media (min-width:1024px){
+      width:100%;
+      height:100%
+    }
+    &-title{
+      font-weight: bold;
+      margin-bottom:0.3rem;
+      padding-left:0.5rem;
+    }
+    &-content{
+      border-radius: 10px;
+      background-color: white;
+      padding:0.75rem;
+    }
+  }
+  &__form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left:2rem;
+    padding-right:2rem;
+    padding-bottom:2rem;
+    z-index:1;
+    text-align: center;
+    &-label{
+      display:flex;
+      flex-direction: column;
+    }
+    &-select{
+      background-image:url(src/assets/images/select.png);
+      background-repeat: no-repeat;
+      background-position-x: 94%;
+      background-position-y: 5px;
+      background-size: 3%;
+      padding: 0.2rem 0;
+      border: none;
+      border-radius: 25px;
+      background-color: white;
+      appearance: none;
+      outline: none;
+      width:55%;
+      margin:0.5rem auto;
+      text-align-last: center;
+      @media (min-width:700px){
+        background-position-x: 94%;
+        background-position-y: 5.5px;
+        width:25%;
+      }
+    }
+
+    &-input, &-text-area{
+      padding: 1rem;
+      margin: 0 auto;
+      margin-top:0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      display: block;
+      width: 70vw;
+      @media (min-width:1025px) {
+        width:90%
+      }
+    }
+    &-text-area{
+      height:8rem;
+      resize:none;
+    }
+    &-button {
+      margin:auto;
+      margin-top:1.5rem;
+      height:2.5rem;
+      width:45%;
+      max-width: 150px;
+      border-radius: 10px;
+      border:none;
+      background-color: rgb(37, 195, 223);
+      color:white;
+      box-shadow: 1px 1px 2px #42330d;
+      z-index: 10;
+      @media (min-width:1024px){
+        box-shadow: none;
+        width:25%;
+        margin: 1rem auto;
+      }
+      &:hover{
+        //TODO Agrandir le bouton
+        box-shadow: 1px 1px 2px #42330d;
+      }
+    }
+    
+  }
+}
+.title-review{
+  margin-top:2rem;
+  margin-bottom: 1rem;
+}
+@media (min-width:1025px){
+  .addReview__responsive{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .addReview_right-div, .addReview__left-div{
+    width:45%;
+    display:flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: auto;
+  }
+  .addReview__left-div{
+    border-right : 1px solid #42330d;
+    padding-right: 5rem;
+  }
+  .addReview_right-div{
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+}

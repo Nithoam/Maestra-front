@@ -1,0 +1,71 @@
+@use 'src/styles/vars';
+
+.account-page {
+
+&__modal {
+  box-shadow: 10px 8px 21px -8px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 99;
+  padding:2em;
+  width:91%;
+  background-color: #efefef;
+  position:fixed;
+  min-height:325px;
+  height:50vh;
+  top:50%;
+  right:50%;
+  transform: translate(50%, -50%);
+
+  &-field {
+    margin-bottom:1rem;
+  }
+
+  &-closeBtn {
+    cursor: pointer;
+    color: #efefef;
+    background-color: #3ed5cb;
+    padding:0.5rem;
+    position:absolute;
+    top:0;
+    right:0;
+  }
+
+    &-message {
+      padding:0.5rem;
+      color:white;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    &-presentation {
+      margin-bottom:1.5rem;
+    }
+
+  button {
+    margin-top:1rem;
+    display:block;
+    margin: 0 auto;
+    padding:1rem;
+    border-radius: 10px;
+    border:none;
+    color: #efefef;
+    background-color: #3ed5cb;
+
+    &:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
+ }
+}
+
+@media screen and (min-width : 1024px){
+  .account-page {
+    &__modal {
+      width:30vw;
+      height:30vh;
+    }
+  }
+}

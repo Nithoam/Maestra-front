@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+.legalsMentions{
+  background: linear-gradient(to bottom right, #fbfdd4, vars.$first-color);
+  min-height:100vh;
+  color: #42330d;
+  padding: 2rem;
+  @media screen and (min-width:1025px){
+  padding: 2rem 10rem;
+}
+  &--title {
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  &--header {
+    text-align: center;
+    padding-bottom: 2.5rem;
+  }
+
+  &--footer {
+    padding-top: 2rem;
+  }
+}
+
+.legalsMentions>h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.legalsMentions>h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}

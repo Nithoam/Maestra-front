@@ -1,0 +1,430 @@
+@use 'src/styles/vars';
+@use 'src/styles/animations';
+
+
+
+////**** FIRST SECTION *****////
+
+.account-page {
+  background-color: #faf2d8;
+  padding:1rem;
+  &__nav {
+    display:none;
+
+    li {
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__background {
+    border-radius: 10px;
+    &-flower {
+      display:none;
+    }
+  }
+  &__first-section {
+    padding-top:4rem;
+    margin-bottom: 1rem;
+
+    &-password {
+      align-self: flex-start;
+      margin: 1rem 0;
+      &-title {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 0.25rem;
+      }
+      &-content {
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+
+    &-question {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 0.25rem;
+    }
+
+    &-question-row {
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom:1rem;
+
+
+    &-title {
+      font-size: 12px;
+      font-weight: normal;
+    }
+    }
+
+    &-header {
+      display:inline-block;
+      max-width: 45vw;
+      margin-bottom: 5.5rem;
+      h2 {
+        font-size: 30px;
+        font-weight: bold;
+        display:inline-block;
+      }
+      p {
+        font-size: 11px;
+        font-style: italic;
+      }
+      }
+    &-left {
+      position: absolute;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      max-width: 25vw;
+      right:1rem;
+      top : 4.5rem;
+
+      img {
+        margin-bottom: 0.75rem;
+        max-width: 100px;
+      }
+
+      button {
+        border:none;
+        background-color: #3ED5CB;
+        color:white;
+        border-radius: 10px;
+        padding:0.5rem;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+      &:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
+      }
+      }
+    }
+
+    &-right {
+      padding:1rem;
+      background-color: vars.$first-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      &-flower {
+        display:none;
+      }
+
+      &-message {
+        padding:1rem;
+        color:white;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+
+      &-general-title {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 0.25rem;
+      }
+
+      &-modal {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      &-form {
+        width:100%;
+
+        button {
+          margin:auto;
+          display: block;
+          padding:1rem;
+          border:none;
+          border-radius:10px;
+          color:white;
+          background-color: #3ED5CB;
+          width:200px;
+          align-self: center;
+
+          &:hover {
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+  }
+  }
+
+  &__delete {
+    h3 {
+      font-weight: bold;
+      font-size: 20px;
+      display:inline-block;
+      max-width: 200px;
+    }
+    p {
+      font-size: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      border : none;
+      display:block;
+      margin:auto;
+      background-color: #E91D1D;
+      color:white;
+      padding:0.75rem;
+      border-radius: 10px;
+
+      &:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  /////*** FIRST-SECTION IPAD ***///////
+
+  @media (min-width:768px) and (max-width:1023px){
+    .account-page {
+      &__first-section {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        button {
+          margin: 0;
+        }
+        &-left {
+          top:-9.25rem;
+        }
+      }
+      &__background {
+        position: relative;
+        &-flower {
+          display:block;
+          position: absolute;
+          transform: rotate(270deg);
+          width:70%;
+          right:-1.5rem;
+          bottom: 1.5rem;
+        }
+      }
+    }
+  }
+
+  /////*** FIRST-SECTION DESKTOP ***///////
+
+  @media screen and (min-width:1024px){
+    .account-page {
+      padding: 1rem 5rem;
+      &__nav {
+        display:block;
+        z-index:2;
+      }
+  
+      &__background {
+        background-color: vars.$first-color;
+        display: flex;
+        justify-content: space-between;
+        padding:2rem;
+        position:relative;
+  
+        &-flower {
+          display:block;
+          position: absolute;
+          width:45%;
+          bottom:0;
+          left:0;
+          max-width: 700px;
+  
+        }
+      }
+  
+      &__first-section {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        &-header {
+          margin-left:1.5rem;
+          margin-bottom: 0.5rem;
+        }
+  
+        &-left {
+          z-index:2;
+          position: static;
+          flex-basis: 30%;
+          padding: 0 5rem;
+          display:flex;
+          flex-direction: column;
+  
+          img {
+            width:125px;
+            max-width: 200px;
+            align-self: center;
+          }
+          button {
+            margin-bottom: 0.75rem;
+            padding:1rem;
+            border-radius: 10px;
+            border: none;
+            background-color: #3ED5CB;
+            color:#efefef;
+          }
+        }
+  
+        &-right {
+          z-index:2;
+          flex-basis: 70%;
+          background-color: #efefef;
+          border-radius: 10px;
+          position:relative;
+
+          &-flower {
+            display:block;
+            position:absolute;
+            max-width:450px;
+            transform: rotate(180deg);
+            top:0;
+            right:0;
+          }
+
+          button {
+            margin: 0;
+          }
+        }
+      }
+      &__delete {
+        width:100%;
+        text-align: right;
+        display:flex;
+        flex-direction: column;
+  
+        h3 {
+          max-width: none;
+          margin-bottom:0.5rem;
+        }
+
+        button {
+          text-align: center;
+          align-self: flex-end;
+          max-width:175px;
+        }
+  
+        p {
+          padding-left: 40%;
+        }
+      }
+    }
+  }
+
+
+    //////******* SECOND SECTION *******//////// 
+
+    &__second-section {
+      &__empty {
+        animation: appear 3s ease-in-out;
+        width:100%;
+        text-align: center;
+        padding: 0 1rem 2rem 1rem;
+
+        &-img {
+          width:90%;
+        }
+
+        &-text {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+      &__deleteMsg {
+        text-align: center;
+        display: inline-block;
+        margin-left:50%;
+        transform: translate(-50%, 0);
+        padding:1rem;
+        color:white;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+      }
+      &__header {
+        margin-bottom:1rem;
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        p {
+          font-size: 11px;
+          font-style: italic;
+        }
+      }
+      &__reviews-list {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+      }
+    }
+        
+}
+
+  /////*** SECOND-SECTION IPAD ***///////
+
+  @media (min-width:768px) and (max-width:1023px){
+    .account-page {
+      &__second-section {
+
+        &__empty {
+  
+          &-img {
+            width:75%;
+          }
+  
+          &-text {
+            font-size: 28px;
+            font-weight: bold;
+          }
+        }
+
+        &__header {
+          margin-bottom: 1rem;
+        }
+
+        &__reviews-list {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+
+////////**** SECOND-SECTION DESKTOP ******/////////
+
+  @media screen and (min-width:1024px){ 
+    .account-page {
+          &__second-section {
+            min-height:460px;
+
+
+        &__empty {
+          padding-top:2rem;
+          padding-bottom: 3rem;
+  
+          &-img {
+            width:45%;
+          }
+  
+          &-text {
+            font-size: 28px;
+            font-weight: bold;
+          }
+        }
+
+            &__header {
+              margin-left:1.5rem;
+            }
+
+
+            &__reviews-list {
+              grid-template-columns: 1fr 1fr 1fr;
+            }
+          }
+        }
+        }

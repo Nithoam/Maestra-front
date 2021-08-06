@@ -1,0 +1,78 @@
+@use 'src/styles/vars';
+.teamdev{
+  background: linear-gradient(to bottom right, #fbfdd4, vars.$first-color);
+  min-height:70vh;
+  @media (min-width:1024px){
+    min-height:90vh;
+  }
+
+  &__cards{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:4.5rem 0 4rem 0rem;
+    margin:auto;
+    width:90%;
+    @media (min-width:700px){
+      display:flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      padding:5rem 0 2rem 0rem; // need correction
+    }
+    @media (min-width:1025px){
+      width:100%;
+      justify-content: center;
+      padding:14.5rem 0 0 0; // need correction
+    }
+  }
+  &__card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:1rem;
+    width:90%;
+    // border: 1px solid black;
+    padding: 0.3rem;
+    @media (min-width:700px){
+      width:45%;
+      padding-right:1rem;
+    }
+    @media (min-width:1025px){
+      width:19.5%;
+      margin:1rem 0.1rem;
+      padding-right:0rem;
+    }
+    &-photo{
+      width:100px;
+      height:100px;
+      border-radius: 50%;
+    }
+    &-name{
+      font-weight: bold;
+      padding-top: 0.5rem;
+      text-align: center;
+    }
+    &-work{
+      padding-top: 0.3rem;
+      text-align: center;
+    }
+    &-situation{
+      padding-top: 0.3rem;
+      text-align: center;
+    }
+    &-region{
+      padding-top: 0.3rem;
+      text-align: center;
+    }
+    &-github{
+      padding-top: 0.3rem;
+      margin:auto
+    }
+    &-connection{
+      padding-top: 0.3rem;
+      text-align: center;   
+    }
+  }
+}
