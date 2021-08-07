@@ -1,8 +1,32 @@
-# maestra-front
+# Maestra
 
-# Partie react du projet Maestra 
+# Partie front-end du projet Maestra
+ 
+Le projet Maestra, est un projet de fin de formation réalisé par cinq étudiants, deux developpeurs back-end et trois developpeurs fron-end. Ce dossier regroupe l'ensemble de la partie front-end !
 
-1. Règlement des branches : 
+## Composition de l'équipe 
 
-Chaque nouvelle fonctionnalité doit être développée sur une sous-branche de 'dev' qui elle même est une branche distincte de la branche principale. La branche dev sert de tampon. 
-# Maestra-front
+- Lucile Bouron (developpeuse Back - Symfony)
+- Christopher Rousseau (developpeur Back - Symfony)
+- Victor Paumier (developpeur Front - React)
+- Arnaud Barbey (developpeur Front - React)
+- Nicolas Garilliere (developpeur Front - React), moi même !
+
+## Sujet
+
+Le projet est un site d'information sur les pilules contraceptives, regroupant une fonction de tri/recherche, d'ajout d'avis et d'une gestion de compte.
+
+### Pourquoi Maestra ?
+
+Du féminin maestro, une maestra est une personne qui gère, qui organise, un orchestre. Nous avons fait le parallèle avec la pilule qui organise le systeme hormonale de la femme !
+
+
+
+### Me contacter 
+
+Je suis à la recherche d'une alternance en région parisienne, n'hésitez pas à me contacter
+
+par email : nicolas.nithoam@gmail.com
+par téléphone : 06 49 51 36 55
+par Linkedn : https://www.linkedin.com/in/nicolas-garilliere/ 
+
