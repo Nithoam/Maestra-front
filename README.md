@@ -27,6 +27,8 @@ Du féminin maestro, une maestra est une personne qui gère, qui organise, un or
 Je suis à la recherche d'une alternance en région parisienne, n'hésitez pas à me contacter
 
 par email : nicolas.nithoam@gmail.com
+
 par téléphone : 06 49 51 36 55
+
 par Linkedn : https://www.linkedin.com/in/nicolas-garilliere/ 
 
